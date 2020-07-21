@@ -1,0 +1,33 @@
+.container {
+    border: 1px solid blue;
+
+    display: flex;
+    justify-content: space-evenly;
+
+    a {
+        border : 1px solid red;
+        --margin: 0.3vw;
+        margin-top: var(--margin);
+        margin-bottom: var(--margin);
+
+        font-size: 1.3rem;
+
+        text-decoration: none;
+        color: blue;
+
+        &:visited {
+            text-decoration: none;
+            color: blue;
+        }
+    }
+
+    &.onBigScreen {
+        border: 1px solid red;
+        justify-content: flex-start;
+        a {
+            border: 1px solid green;
+            margin-left: calc(var(--margin) * 2);
+            margin-right: calc(var(--margin) * 2);
+        }
+    }
+}
