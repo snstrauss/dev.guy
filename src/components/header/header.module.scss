@@ -1,6 +1,5 @@
 .container {
-    border: 1px solid blue;
-
+    height: 100%;
     display: flex;
     justify-content: space-evenly;
 
@@ -22,10 +21,8 @@
     }
 
     &.onBigScreen {
-        border: 1px solid red;
         justify-content: flex-start;
         a {
-            border: 1px solid green;
             margin-left: calc(var(--margin) * 2);
             margin-right: calc(var(--margin) * 2);
         }
