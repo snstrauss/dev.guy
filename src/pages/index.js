@@ -1,6 +1,6 @@
 import React, { createContext, useEffect, useState } from "react"
 import './global.scss';
-import Header from '../components/header/header';
+import ViewSwitch from '../components/view-switch/view-switch';
 
 export const EnvContext = createContext();
 
@@ -21,10 +21,7 @@ const IndexPage = () => {
     <EnvContext.Provider value={env}>
       {
         env &&
-        <>
-          <Header/>
-          hehy
-        </>
+        <ViewSwitch/>
       }
     </EnvContext.Provider>
   )
