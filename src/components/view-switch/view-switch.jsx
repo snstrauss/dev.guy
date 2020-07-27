@@ -1,7 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react';
 import S from './view-switch.module.scss';
 import Header from '../header/header';
-
 import anime from 'animejs';
 import { removeHash, getCurrentTab } from '../../services/utils';
 import { useMemo } from 'react';
@@ -26,12 +25,10 @@ export default function ViewSwitch({ views }){
 
     let currentTab = getCurrentTab();
     useEffect(() => {
-        // const leftMultiplier = getCurrentTab();
 
         if(!firstRun.current){
             anime({
                 targets: '#scroller',
-                // translateX: calculateTranslateX(leftMultiplier, tabRelativeWidth),
                 translateX: calculateTranslateX(currentTab, tabRelativeWidth),
                 easing: 'spring'
             })
@@ -52,8 +49,8 @@ export default function ViewSwitch({ views }){
             <div className={S.views}>
                 <div className={S.scroller} id={removeHash(SCROLLER_SELECTOR)} style={{'--tabs-count': viewContents.length}}>
                     {
-                        viewContents.map((View, idx) => (
-                            <View key={idx}/>
+                        viewContents.map((Tab, idx) => (
+                            <Tab key={idx}/>
                         ))
                     }
                 </div>
