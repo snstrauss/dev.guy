@@ -1,10 +1,10 @@
 import React from 'react';
 import S from './view.module.scss';
 
-export default function View({ children, tabNumber }){
+export default function View({ children }){
 
     return (
-        <div className={S.container} data-tab={tabNumber}>
+        <div className={S.container}>
             {children}
         </div>
     )

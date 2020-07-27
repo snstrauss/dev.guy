@@ -1,9 +1,12 @@
 import React from 'react';
 import S from './projects.module.scss';
+import View from '../../components/view/view';
 
 export default function Projects(){
 
     return (
-        <h2>projects</h2>
+        <View>
+            <h2>projects</h2>
+        </View>
     )
 }
