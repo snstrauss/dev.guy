@@ -1,6 +1,7 @@
 import React, { createContext, useEffect, useState } from "react"
 import './global.scss';
 import ViewSwitch from '../components/view-switch/view-switch';
+import views from "../views";
 
 export const EnvContext = createContext();
 
@@ -21,7 +22,7 @@ const IndexPage = () => {
     <EnvContext.Provider value={env}>
       {
         env &&
-        <ViewSwitch/>
+        <ViewSwitch views={views} />
       }
     </EnvContext.Provider>
   )

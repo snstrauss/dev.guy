@@ -4,13 +4,14 @@
     flex-direction: column;
 
     overflow: hidden;
+
     .header {
         flex: 1;
     }
+
     .views {
         flex: 10;
         .scroller {
-            // width: 400%;
             width: calc(100% * var(--tabs-count));
             height: 100%;
             display: flex;
@@ -23,5 +24,32 @@
 
         width: 100%;
         overflow-x: scroll;
+    }
+
+    .markers {
+        position: absolute;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        bottom: 5vh;
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: 40%;
+
+        .marker {
+            border-radius: 50%;
+            --size: 3vw;
+            width: var(--size);
+            height: var(--size);
+            background-color: #d6d6d6;
+
+            opacity: 0.5;
+            transition: opacity 0.2s ease-in-out;
+
+            &.current {
+                opacity: 1;
+            }
+        }
     }
 }
