@@ -6,7 +6,12 @@ export default function Hero(){
 
     return (
         <View>
-            <h2>hero</h2>
+            <div className={S.container}>
+                <p>
+                    <span className={S.name}>Guy Zahavi</span>
+                    <span className={S.title}>Front-end Developer</span>
+                </p>
+            </div>
         </View>
     )
 }
