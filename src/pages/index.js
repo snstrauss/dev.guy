@@ -10,6 +10,7 @@ const IndexPage = () => {
   const [env, setEnv] = useState();
 
   useEffect(() => {
+
     const env = {
       isBigScreen: window.innerWidth > 600,
       isProd: process.env.NODE_ENV === 'production'
@@ -22,7 +23,9 @@ const IndexPage = () => {
     <EnvContext.Provider value={env}>
       {
         env &&
-        <ViewSwitch views={views} />
+        <div className="app-background">
+          <ViewSwitch views={views} />
+        </div>
       }
     </EnvContext.Provider>
   )
