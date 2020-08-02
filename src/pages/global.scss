@@ -1,10 +1,61 @@
+@font-face {
+    font-family: regular;
+    src: url('../../public/static/fonts/Montserrat-Regular.ttf');
+}
+@font-face {
+    font-family: bold;
+    src: url('../../public/static/fonts/Montserrat-Bold.ttf');
+}
+@font-face {
+    font-family: extrabold;
+    src: url('../../public/static/fonts/Montserrat-ExtraBold.ttf');
+}
+@font-face {
+    font-family: light;
+    src: url('../../public/static/fonts/Montserrat-Light.ttf');
+}
+@font-face {
+    font-family: extralight;
+    src: url('../../public/static/fonts/Montserrat-ExtraLight.ttf');
+}
+
 html, #___gatsby, #gatsby-focus-wrapper {
     height: 100%;
     width: 100%;
     display: flex;
 
+    font-family: regular;
 }
 body {
     margin: 0;
     flex: 1;
+}
+
+.app-background{
+    width: 100%;
+    height: 100%;
+
+    background: linear-gradient(
+        136deg,
+        #d4c762,
+        #4cc1b5,
+        #4398dd,
+        #f37e80
+    );
+
+    background-size: 1200% 1200%;
+
+    animation: gradient-slide 100s ease infinite;
+}
+
+@keyframes gradient-slide {
+    0% {
+        background-position: 0% 7%;
+    }
+    50% {
+        background-position: 100% 94%;
+    }
+    100% {
+        background-position: 0% 7%;
+    }
 }

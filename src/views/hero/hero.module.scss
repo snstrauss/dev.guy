@@ -1,3 +1,27 @@
 .container {
     background-color: purple;
+    width: 100%;
+
+    border: 2px solid red;
+
+    height: 100%;
+    display: grid;
+    place-items: center;
+
+    p {
+        display: flex;
+        flex-direction: column;
+
+        .name {
+            color: red;
+            font-size: 3rem;
+            font-family: regular;
+            font-weight: 100;
+        }
+
+        .title {
+            color: blue;
+            font-size: 1.5rem;
+        }
+    }
 }
